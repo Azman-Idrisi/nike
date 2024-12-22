@@ -1,5 +1,5 @@
 import { shoe8 } from "../assets/images";
-import  Button  from "../components/Button";
+import Button from "../components/Button";
 
 const SuperQuality = () => {
   return (
@@ -22,7 +22,9 @@ const SuperQuality = () => {
           Our dedication to detail and excellence ensures your satisfaction
         </p>
         <div className='mt-11'>
-          <Button label='View details' />
+          <Button className="custom-class">
+            View Details
+          </Button>
         </div>
       </div>
 

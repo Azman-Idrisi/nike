@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ 
-  children = 'Shop Now!', 
-  onClick = () => {}, 
+  children, // Button text
+  icon = null, 
   className = '', 
-  icon = null 
+  ...rest // Capture all additional props
 }) => {
   return (
     <button
-      onClick={onClick}
       className={`
         bg-black hover:bg-gray-800
         text-white font-bold
@@ -22,9 +21,10 @@ const Button = ({
         flex items-center gap-2
         ${className}
       `}
+      {...rest} // Spread additional props here
     >
-      {/* Render button text or children */}
-      {children}
+      {/* Render button text or default to "Shop Now" */}
+      {children || 'Shop Now!'}
 
       {/* Optional icon */}
       {icon && <img src={icon} alt="icon" className="w-5 h-5 ml-2" />}
@@ -51,9 +51,8 @@ const Button = ({
 // Prop type validation
 Button.propTypes = {
   children: PropTypes.node,          // Button text or nested elements
-  onClick: PropTypes.func,           // Click handler
-  className: PropTypes.string,       // Custom classes for styling
   icon: PropTypes.string,            // Optional icon URL
+  className: PropTypes.string,       // Custom classes for styling
 };
 
 export default Button;
