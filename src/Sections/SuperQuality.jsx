@@ -1,5 +1,5 @@
 import { shoe8 } from "../assets/images";
-import { Button } from "../components/Button";
+import  Button  from "../components/Button";
 
 const SuperQuality = () => {
   return (
@@ -9,7 +9,7 @@ const SuperQuality = () => {
     >
       <div className='flex flex-1 flex-col'>
         <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold'>
-          We Provide You 
+          We Provide You
           <span className='text-coral-red'> Super </span>
           <span className='text-coral-red'>Quality </span> Shoes
         </h2>
